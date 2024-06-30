@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 run =  ["gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
 entrypoint = "main.py"
 modules = ["nodejs-20", "python-3.10:v18-20230807-322e88b"]
@@ -18,3 +19,25 @@ externalPort = 3000
 [[ports]]
 localPort = 5000
 externalPort = 80
+=======
+run =  ["gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
+entrypoint = "main.py"
+modules = ["nodejs-20", "python-3.10:v18-20230807-322e88b"]
+
+hidden = [".pythonlibs"]
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run =  ["gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+>>>>>>> c991bf1c97d727ee44a98f945bf02b9fe1859647
