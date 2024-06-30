@@ -1,0 +1,11 @@
+<div class="house-card" data-id="{{ house._id }}">
+    <img src="{{ house.image_url }}" alt="{{ house.name }}" />
+    <h2 >{{ house.name }}</h2>
+    <p>{{ house.address }}</p>
+    <div class="ratings">
+        {% for i in range(house.rating) %}
+        <i class="fas fa-star"></i>
+        {% endfor %}
+    </div>
+    <p>₹ {{ house.price }}/Month</p>
+</div>

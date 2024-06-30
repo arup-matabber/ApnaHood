@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ApnaHood</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}"> -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #181919;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('home') }}"><img src="static/logo.png" alt="Logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto custom-margin" style="display: flex;">
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <button class="sign-in-button" id="signinbutton">
+                                <span class="icon"><i class="fas fa-sign-in-alt"></i></span> Sign In
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form> -->
+            </div>
+        </div>
+  </nav>
+    <br>
+    <section class="container mt-5 " style="color: #fff;">
+        <div class="row">
+            <div class="col ">
+                <h1 class="display-4">About Us</h1>
+                <p class="lead mt-4 ">Welcome to ApnaHood, your trusted partner in finding the perfect paying guest accommodation. We understand that finding a comfortable and affordable place to stay can be challenging, especially in bustling cities. That’s why we’re here to simplify the process and provide you with the best PG options tailored to your needs.</p>
+                <br>
+                <h3 class="display-4">Who We Are</h3>
+                <p class="lead ">ApnaHood was founded with a mission to make the search for PG accommodations hassle-free and efficient. Our team consists of real estate enthusiasts, tech experts, and customer service professionals who are passionate about helping you find a home away from home.</p>
+                <br>
+                <h3 class="display-4">What We Do</h3>
+                <p class="lead ">We offer a comprehensive platform where you can explore a wide range of PG accommodations. Whether you are a student, a working professional, or someone new to the city, we have a variety of options to suit your preferences and budget. Our listings include detailed descriptions, high-quality images, and reviews from previous tenants to help you make an informed decision.</p>
+                <br>
+                <h2 class="display-4">Our Mission</h3>
+                <p class="lead ">Our mission is to provide a seamless and transparent experience for anyone looking for PG accommodations. We strive to offer:
+                Extensive Listings: A diverse selection of PGs across different locations, catering to various budgets and preferences.
+                Detailed Information: Comprehensive details about each PG, including amenities, rules, and nearby facilities.
+                User-Friendly Interface: An intuitive and easy-to-navigate website to make your search process smooth and efficient.
+                Trust and Transparency: Genuine reviews and ratings from previous tenants to help you choose the best option.</p>
+                <br>
+                <h3 class="display-4">Why Choose Us?</h3>
+                <p class="lead ">Verified Listings: We ensure that all our PG listings are verified for authenticity and quality.
+                Customer Support: Our dedicated support team is always ready to assist you with any queries or concerns.
+                Secure Transactions: We prioritize your safety with secure payment options and transparent dealings.
+                Continuous Improvement: We constantly update our platform based on user feedback to provide you with the best experience.</p>
+                <br>
+                <h3 class="display-4">Get in Touch</h3>
+                <p class="lead ">We are always here to help you find the perfect PG accommodation. If you have any questions, need assistance, or want to provide feedback, feel free to reach out to us.
+                Thank you for choosing ApnaHood . We look forward to helping you find your next home!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <<footer class="footer">
+            <div class="container">
+                <div class="footer-column">
+                    <h5></span>Company</h5>
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Get Help</h5>
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Online Shop</h5>
+
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Follow Us</h5>
+                    <hr class="someClass">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <div id="entrykey">
+              <div class="container" id="container">
+                  <div class="form-container signup-container">
+                      <form action="" id="submitin">
+                          <h1>Create Account</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"
+                                  ><i class="fab fa-facebook-f"></i
+                              ></a>
+                              <a href="#" class="social"
+                                  ><i class="fab fa-google-plus-g"></i
+                              ></a>
+                              <a href="#" class="social"
+                                  ><i class="fab fa-linkedin-in"></i
+                              ></a>
+                          </div>
+                          <span>or use your email to join us</span>
+                          <input type="text" name="username" placeholder="Name" required/>
+                          <input type="text" name="email" placeholder="Email" required/>
+                          <input type="text" name="number" placeholder="Phone Number" required/>
+                          <input type="text" name="password" placeholder="Password" required/>
+                          <button type="submit">Sign Up</button>
+                      </form>
+                  </div>
+                  <div class="form-container signin-container">
+                      <form action="#" id="submitin">
+                          <h1>Sign In</h1>
+                          <div class="social-container">
+                          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                      <span>or use your account</span>
+                          <input type="text" name="username" placeholder="Username" required/>
+                          <input type="text" name="password" placeholder="Password" required/>
+                          <a href="#" class="forgot">Forgot your Password</a>
+                          <button type="submit">Sign In</button>
+                      </form>
+                  </div>
+                  <div class="overlay-container">
+                      <div class="overlay">
+                          <div class="overlay-panel overlay-left">
+                              <h1>Welcome Back!</h1>
+                              <p>
+                                  To keep connected with us please log in with
+                                  your account
+                              </p>
+                              <button class="over-btn" id="signin">
+                                  Sign In
+                              </button>
+                          </div>
+                          <div class="overlay-panel overlay-right">
+                              <h1>Hello, there</h1>
+                              <p>To join us please enter your personal details</p>
+                              <button class="over-btn" id="signup">
+                                  Sign Up
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <span class="close">&times;</span>
+              </div>
+
+              <script src="{{ url_for('static', filename='home.js') }}"></script>
+          </div>
+
+      </div>
+    </div>
+
+</body>
+
+</html>

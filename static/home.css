@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*
+{
+  box-sizing: border-box;
+}
+
+#entrykey
+{
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+
+.modal h1
+{
+  font-weight: bold;
+  font-size:30px;
+  margin:0;
+}
+
+.modal p{
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+.modal span{
+  font-size: 12px;
+}
+.modal a{
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+#containr
+{
+  background: #181919;
+  border-radius: 10px;
+  box-shadow:  0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 85%;
+  height: 65vh;
+  min-width: 50%;
+
+}
+.social-container
+{
+  margin: 20px 0;
+}
+.social-container a{
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content:center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+.form-container
+{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+}
+
+.form-container button
+{
+  margin-top: 10px;
+}
+
+.modal button 
+{
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background: #181919;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding:12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  white-space: nowrap;
+  /* display:inline-block; */
+
+}
+.modal button:active{
+  transform: scale(0.95);
+}
+.modal button:focus
+{
+  outline: none;
+}
+.modal button.over-btn
+{
+  background: transparent;
+  border-color: #fff;
+}
+
+.form-container input{
+  background:  #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.form-container input[type=submit]{
+  border-radius: 20px;
+  background: #181919;
+  color: #fff;
+  padding: 12px 15px;
+  margin-top: 10px;
+  width:auto;
+  font-size: 12px;
+  font-weight: bold;
+  padding:12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-container
+{
+  position: absolute;
+  top: 0;
+  height:  100%;
+  transition:  0.6s ease-in-out;
+}
+
+.signin-container
+{
+  left:0;
+  width: 50%;
+  height:  100%;
+  z-index:2;
+}
+
+.signup-container
+{
+  left:0;
+  width: 50%;
+  height:  100%;
+  z-index:1;
+  opacity: 0;
+}
+.signup-container button
+{
+  background: #181919;
+  border-color: #fff;
+}
+signin-container button
+{
+  background: #181919;
+  border-color: #fff;
+}
+.signin-container .forgot
+{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.overlay-container
+{
+  position: absolute;
+  top=0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay
+{
+  background: #181919;
+  /*background: linear-gradient(to right, #181919,#ffff) no-repeat 0 0 / cover;*/
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+.overlay-panel
+{
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transform: translateX(0);
+  transition:  transform 0.6s ease-in-out;
+}
+.overlay-right
+{
+  right: 0;
+  transform: translateX(0);
+}
+.overlay-left
+{
+  transform: translateX(-20%);
+}
+.container.right-panel-active .signin-container
+{
+  transform: translateX(100%);
+}
+.container.right-panel-active .overlay-container
+{
+  transform: translateX(-100%);
+}
+.container.right-panel-active .signup-container
+{
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+.container.right-panel-active .overlay
+{
+  transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left
+{
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right
+{
+  transform: translateX(20%);
+}
+
+.social:hover
+{
+  color: #181919;
+  border-color: #181919;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100% /* Full height */
+  overflow:auto ; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  top: 20%;
+  background-color:transparent;
+  width: 100%;
+  height:100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+  color: #333;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {padding: 2px 16px;}
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {top: -300px; opacity: 0} 
+  to {top: 20%; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {top: -300px; opacity: 0}
+  to {top: 20%; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}

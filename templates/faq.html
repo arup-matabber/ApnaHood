@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ApnaHood</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='faq.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #181919;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('about') }}"><img src="static/logo.png" alt="Logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto custom-margin" style="display: flex;">
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <button class="sign-in-button" id="signinbutton">
+                                <span class="icon"><i class="fas fa-sign-in-alt"></i></span> Sign In
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form> -->
+            </div>
+        </div>
+  </nav>
+
+    
+<div id="FAQ">
+    <div class="faq-container">
+        <h1>Frequently Asked Questions (FAQs)</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search FAQs...">
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What is ApnaHood?</div>
+            <div class="faq-answer">ApnaHood is a web application that helps students and working professionals find PGs and rented houses. We also provide delivery of furniture to PGs or rented houses and accept online payments.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I search for a PG or rented house on ApnaHood?</div>
+            <div class="faq-answer">You can search for PGs or rented houses by entering your desired location and other preferences in the search bar on our homepage. The app will display a list of available options that match your criteria.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I filter my search results?</div>
+            <div class="faq-answer">Yes, you can filter your search results based on various criteria such as price, location, amenities, and more.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do you offer furniture delivery to PGs or rented houses?</div>
+            <div class="faq-answer">Yes, ApnaHood provides delivery of furniture to PGs or rented houses. You can select the furniture you need from our catalog, and we will deliver it to your location.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I make a payment on ApnaHood?</div>
+            <div class="faq-answer">You can make payments online through our secure payment gateway. We accept various payment methods including credit/debit cards, net banking, and popular digital wallets.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Is my payment information secure?</div>
+            <div class="faq-answer">Yes, we use industry-standard encryption and security measures to ensure that your payment information is safe and secure.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I cancel my booking?</div>
+            <div class="faq-answer">Yes, you can cancel your booking. Please refer to our cancellation policy for detailed information on the process and any applicable fees.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I contact customer support?</div>
+            <div class="faq-answer">You can contact our customer support team via email at support@apnahood.com or call us at our customer service number. We are available 24/7 to assist you with any queries or issues.</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const openItems = document.querySelectorAll('.faq-question.open');
+
+                openItems.forEach(openItem => {
+                    if (openItem !== item) {
+                        openItem.classList.remove('open');
+                        openItem.nextElementSibling.style.display = 'none';
+                    }
+                });
+
+                item.classList.toggle('open');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', () => {
+            const filter = searchInput.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+                if (question.includes(filter) || answer.includes(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</div>
+
+
+        <<footer class="footer">
+            <div class="container">
+                <div class="footer-column">
+                    <h5></span>Company</h5>
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Get Help</h5>
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Online Shop</h5>
+
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Follow Us</h5>
+                    <hr class="someClass">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <div id="entrykey">
+              <div class="container" id="containr">
+                  <div class="form-container signup-container">
+                      <form action="" id="submitin">
+                          <h1>Create Account</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"
+                                  ><i class="fab fa-facebook-f"></i
+                              ></a>
+                              <a href="#" class="social"
+                                  ><i class="fab fa-google-plus-g"></i
+                              ></a>
+                              <a href="#" class="social"
+                                  ><i class="fab fa-linkedin-in"></i
+                              ></a>
+                          </div>
+                          <span>or use your email to join us</span>
+                          <input type="text" name="username" placeholder="Name" required/>
+                          <input type="text" name="email" placeholder="Email" required/>
+                          <input type="text" name="number" placeholder="Phone Number" required/>
+                          <input type="text" name="password" placeholder="Password" required/>
+                          <button type="submit">Sign Up</button>
+                      </form>
+                  </div>
+                  <div class="form-container signin-container">
+                      <form action="#" id="submitin">
+                          <h1>Sign In</h1>
+                          <div class="social-container">
+                          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                      <span>or use your account</span>
+                          <input type="text" name="username" placeholder="Username" required/>
+                          <input type="text" name="password" placeholder="Password" required/>
+                          <a href="#" class="forgot">Forgot your Password</a>
+                          <button type="submit">Sign In</button>
+                      </form>
+                  </div>
+                  <div class="overlay-container">
+                      <div class="overlay">
+                          <div class="overlay-panel overlay-left">
+                              <h1>Welcome Back!</h1>
+                              <p>
+                                  To keep connected with us please log in with
+                                  your account
+                              </p>
+                              <button class="over-btn" id="signin">
+                                  Sign In
+                              </button>
+                          </div>
+                          <div class="overlay-panel overlay-right">
+                              <h1>Hello, there</h1>
+                              <p>To join us please enter your personal details</p>
+                              <button class="over-btn" id="signup">
+                                  Sign Up
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <span class="close">&times;</span>
+              </div>
+
+              <script src="{{ url_for('static', filename='home.js') }}"></script>
+          </div>
+
+      </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+Endpoints : 
+
+home
+= homepage 
+contains feed and suggestions
+
+searchview
+= search page
+
+//mapview
+
+rent
+= pg-internal info page
+
+property
+= to handle property
+
+orders 
+= 
+
+shop
+= 
+
+profile
+= profile of user
+
+support
+= support and faq
+
+about-us
+= about us, our services , company , contact us
+
+
+
+
+
+

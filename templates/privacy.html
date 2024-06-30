@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ApnaHood</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #181919;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('about') }}"><img src="static/logo.png" alt="Logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto custom-margin" style="display: flex;">
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="padding: 10px 20px" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <button class="sign-in-button" id="signinbutton">
+                                <span class="icon"><i class="fas fa-sign-in-alt"></i></span> Sign In
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form> -->
+            </div>
+        </div>
+  </nav>
+    <div class="container text-white align-justify" >
+        <h1>Privacy Policy</h1>
+        <h2>Last updated: June 29, 2024</h2>
+    
+        <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+
+        <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+        <h2>Interpretation and Definitions :</h2>
+        <h3>Interpretation</h3>
+
+        <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+        <h3>Definitions</h3>
+
+        <ul>
+          <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+          <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+          <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to ApnaHood.</li>
+          <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
+          <li><strong>Country</strong> refers to: West Bengal, India</li>
+          <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+          <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+          <li><strong>Service</strong> refers to the Website.</li>
+          <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+          <li><strong>Third-party Social Media Service</strong> refers to any website or any social network website through which a User can log in or create an account to use the Service.</li>
+          <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+          <li><strong>Website</strong> refers to ApnaHood, accessible from <a href="www.ApnaHood.com">www.ApnaHood.com</a></li>
+          <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+        </ul>
+
+        <h2>Collecting and Using Your Personal Data :</h2>
+        <h3>Types of Data Collected-</h3>
+        <h4>Personal Data</h4>
+
+        <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+
+        <ul>
+          <li>Email address</li>
+          <li>First name and last name</li>
+          <li>Phone number</li>
+          <li>Address, State, Province, ZIP/Postal code, City</li>
+          <li>Usage Data</li>
+        </ul>
+
+        <h4>Usage Data</h4>
+
+        <p>Usage Data is collected automatically when using the Service.</p>
+
+        <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+
+        <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+
+        <p>We may also collect information that Your browser sends whenever You visit our
+                <br>
+    </div>
+
+        <<footer class="footer">
+            <div class="container">
+                <div class="footer-column">
+                    <h5></span>Company</h5>
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Get Help</h5>
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Online Shop</h5>
+
+                    <hr class="someClass">
+                    <ul>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5><span class="red-line"></span>Follow Us</h5>
+                    <hr class="someClass">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+          <div id="entrykey">
+              <div class="container" id="containr">
+                  <div class="form-container signup-container">
+                      <form action="" id="submitin">
+                          <h1>Create Account</h1>
+                          <div class="social-container">
+                              <a href="#" class="social"
+                                  ><i class="fab fa-facebook-f"></i
+                              ></a>
+                              <a href="#" class="social"
+                                  ><i class="fab fa-google-plus-g"></i
+                              ></a>
+                              <a href="#" class="social"
+                                  ><i class="fab fa-linkedin-in"></i
+                              ></a>
+                          </div>
+                          <span>or use your email to join us</span>
+                          <input type="text" name="username" placeholder="Name" required/>
+                          <input type="text" name="email" placeholder="Email" required/>
+                          <input type="text" name="number" placeholder="Phone Number" required/>
+                          <input type="text" name="password" placeholder="Password" required/>
+                          <button type="submit">Sign Up</button>
+                      </form>
+                  </div>
+                  <div class="form-container signin-container">
+                      <form action="#" id="submitin">
+                          <h1>Sign In</h1>
+                          <div class="social-container">
+                          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                      <span>or use your account</span>
+                          <input type="text" name="username" placeholder="Username" required/>
+                          <input type="text" name="password" placeholder="Password" required/>
+                          <a href="#" class="forgot">Forgot your Password</a>
+                          <button type="submit">Sign In</button>
+                      </form>
+                  </div>
+                  <div class="overlay-container">
+                      <div class="overlay">
+                          <div class="overlay-panel overlay-left">
+                              <h1>Welcome Back!</h1>
+                              <p>
+                                  To keep connected with us please log in with
+                                  your account
+                              </p>
+                              <button class="over-btn" id="signin">
+                                  Sign In
+                              </button>
+                          </div>
+                          <div class="overlay-panel overlay-right">
+                              <h1>Hello, there</h1>
+                              <p>To join us please enter your personal details</p>
+                              <button class="over-btn" id="signup">
+                                  Sign Up
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <span class="close">&times;</span>
+              </div>
+
+              <script src="{{ url_for('static', filename='home.js') }}"></script>
+          </div>
+
+      </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile Dropdown Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body  style="background:#18191A;">
+    <div class="container">
+
+
+      <div class="buttons">
+        <div class="d-flex">
+          <div id="navdrop" class="btn-dark">
+            <div class="drop-btn">
+              <a id="menu" tooltipped="" href="#!"> 
+                <p>Royal Bengal Coders</p>
+                <img src="assets/img/user2.jpg" class="profilePicture" style="cursor: pointer !important;border-radius:100%;object-fit:cover;width:33px;height: 33px;margin-left: 1px;">
+              </a>
+            </div>
+            <div class="tooltip"></div>
+            <div class="wrapper" style="height: 385px;">
+              <ul class="menu-bar" style="margin-left: 0px;">
+                <li class="profile-dsf3SD_02-1SAd9">
+                  <a href="#">
+                    <img src="assets/img/user2.jpg" class="responsive-img">
+                    <div> <span id="ch_head_name">Royal Bengal Coders</span> 
+                      <br> <span id="head_manage_acc">Manage Settings</span>
+                    </div>
+                  </a>
+                </li>
+                <hr>
+                <li class="feed-dsf3SD_02-1SAd9">
+                  <a href="#">
+                    <div class="icon"> <span class="material-icons">feedback</span>
+                    </div>
+                    <div> <span id="feed-title">Give Feedback</span> 
+                      <br> <span id="feed-subject">Help us improve the new VodClip</span>
+                    </div>
+                  </a>
+                </li>
+                <hr>
+                <li class="setting-item">
+                  <a href="javascript:void(0)">
+                    <div class="icon"> <span class="material-icons">settings</span>
+                    </div> <span>Settings &amp; privacy&nbsp;&nbsp;</span>  <i class="material-icons">keyboard_arrow_right</i> 
+                  </a>
+                </li>
+                <li class="help-item">
+                  <a href="javascript:void(0)">
+                    <div class="icon"><span class="material-icons">help</span>
+                    </div>Help &amp; support&nbsp;&nbsp;<i class="material-icons">keyboard_arrow_right</i> 
+                  </a>
+                </li>
+                <li class="theme-item">
+                  <a href="javascript:void(0)">
+                    <div class="icon"><span class="material-icons">brightness_medium</span>
+                    </div>Display &amp; Theme&nbsp;&nbsp;<i class="material-icons">keyboard_arrow_right</i> 
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="icon"><span class="material-icons">group</span></span>
+                    </div>About us</a>
+                </li>
+              </ul>
+              <ul class="theme-drop" style="display: none;">
+                <div class="arrow"> <i class=" back-theme-btn material-icons waves-effect">arrow_back</i>  <span>&nbsp;Display &amp; Theme</span>
+                </div>
+                <hr>
+                <li>
+                  <a href="javascript:void(0);" onclick="swapdark('dark.css')">
+                    <div class="icon"><span class="material-icons">brightness_2</span>
+                    </div>Dark</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" onclick="swaplight('light.css')">
+                    <div class="icon"><span class="material-icons">wb_sunny</span>
+                    </div>Light</a>
+                </li>
+              </ul>
+              <ul class="setting-drop" style="display: none;">
+                <div class="arrow"> <i class=" back-setting-btn material-icons waves-effect">arrow_back</i>  <span>&nbsp;Settings &amp; Privacy</span>
+                </div>
+                <hr>
+                <li>
+                  <a href="account.php">
+                    <div class="icon"><span class="material-icons">account_box</span>
+                    </div>Personal info</a>
+                </li>
+                <li>
+                  <a href="settings.php#password">
+                    <div class="icon"><span class="material-icons">lock</span>
+                    </div>Password</a>
+                </li>
+                <li>
+                  <a href="mylogs.php?">
+                    <div class="icon"><span class="material-icons">format_list_bulleted</span>
+                    </div>Activity log</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="icon"><span class="material-icons">language</span>
+                    </div>Languages</a>
+                </li>
+                <li class="logout">
+                  <a href="javascript:void(0);">
+                    <div class="icon"><span class="material-icons">exit_to_app</span>
+                    </div>Signout</a>
+                </li>
+              </ul>
+              <ul class="help-drop" style="display: none;">
+                <div class="arrow"> <i class=" back-help-btn material-icons waves-effect">arrow_back</i>  <span>&nbsp;Help &amp; Support</span>
+                </div>
+                <hr>
+                <li>
+                  <a href="#">
+                    <div class="icon"><span class="material-icons">help_outline</span>
+                    </div>Help centre</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="icon"><span class="material-icons">contact_mail</span>
+                    </div>Support Inbox</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="icon"><span class="material-icons">feedback</span>
+                    </div>Send feedback</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="icon"><span class="material-icons">report</span>
+                    </div>Report problem</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+<script type="text/javascript" src="{{ url_for('static', filename='profile.js') }}"></script>

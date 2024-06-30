@@ -1,0 +1,120 @@
+.entryform {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9;
+  /* border-radius: 10px; */
+}
+
+.containerform {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       border-radius: 20px;
+  }
+ .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+  }
+ .header a {
+      text-decoration: none;
+      color: #337ab7;
+  }
+ .header a:hover {
+      color: #23527c;
+  }
+ .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+  }
+ .nav a {
+      text-decoration: none;
+      color: #337ab7;
+      margin-right: 20px;
+  }
+ .nav a:hover {
+      color: #23527c;
+  }
+ .property-info {
+      padding: 20px;
+  }
+ .form-group {
+      margin-bottom: 20px;
+  }
+ .form-group label {
+      display: inline-block;
+      margin-bottom: 10px;
+  }
+ .form-group input[type="text"],.form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+ .form-group textarea {
+      height: 100px;
+  }
+ .upload-container {
+      display: flex ;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      border: 1px dashed #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+ .upload-container i {
+      font-size: 30px;
+      color: #ccc;
+  }
+ .upload-container.upload-text {
+      margin-left: 10px;
+      font-size: 16px;
+      color: #ccc;
+  }
+ .upload-container input[type="file"] {
+      display: none;
+  }
+ .image-preview {
+      display: flex;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+  }
+ .image-preview img {
+      width: 100%;
+      height: auto;
+  }
+ .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  }
+ .button-container button[type="submit"] {
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+  }
+ .button-container button[type="submit"]:hover {
+      background-color: #23527c;
+  }
+}
+.propertyForm{
+  display: flex;
+  justify-content:flex-wrap;
+}
+#editButton{
+  border-radius:px
+}
